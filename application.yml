@@ -1,0 +1,61 @@
+server:
+  port: 3000
+  address: 0.0.0.0
+
+lavalink:
+  server:
+    password: "testando"
+    playerUpdateInterval: 5
+    statsTaskInterval: 60
+    koe:
+      useNAS: true
+      useEpoll: true
+      useKQueue: false
+      highPacketPriority: true
+      bufferDurationMs: 400
+      byteBufAllocator: "default"
+    sources:
+      bandcamp: true
+      getyarn: true
+      http: true
+      odysee: true
+      reddit: true
+      rumble: true
+      soundcloud: true
+      tiktok: true
+      twitch: true
+      vimeo: true
+      yandex: true
+      youtube: true
+
+      local: false
+    lavaplayer:
+      nonAllocating: false
+      frameBufferDuration: 5000
+      youtubePlaylistLoadLimit: 6
+      gc-warnings: true
+      youtubeSearchEnabled: true
+      odyseeSearchEnabled: true
+      soundcloudSearchEnabled: true
+      yandexMusicSearchEnabled: true
+
+metrics:
+  prometheus:
+    enabled: false
+    endpoint: /metrics
+
+sentry:
+  dsn: ""
+  environment: ""
+
+logging:
+  file:
+    path: ./logs/
+  logback:
+    rollingpolicy:
+      max-file-size: 1GB
+      max-history: 30
+
+  level:
+    root: INFO
+    lavalink: INFO
